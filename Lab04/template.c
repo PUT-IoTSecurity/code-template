@@ -93,7 +93,7 @@ ncrack_mqtt(nsock_pool nsp, Connection *con) {
             cmd.msg_len = ...;
             cmd.username_len = htons(strlen(con->user));
             pass_len = htons(strlen(con->pass));
-            con->outbuf->append(&cmd, sizeof(cmd)); 5
+            con->outbuf->append(&cmd, sizeof(cmd)); 
             con->outbuf->snprintf(strlen(con->user), "%s", con->user);
             con->outbuf->append(&pass_len, sizeof(pass_len));
             con->outbuf->snprintf(strlen(con->pass), "%s", con->pass);

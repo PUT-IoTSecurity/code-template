@@ -97,7 +97,7 @@ ncrack_mqtt(nsock_pool nsp, Connection *con) {
             con->outbuf->snprintf(strlen(con->user), "%s", con->user);
             con->outbuf->append(&pass_len, sizeof(pass_len));
             con->outbuf->snprintf(strlen(con->pass), "%s", con->pass);
-            nsock_write(nsp, nsi, ncrack_write_handler, MQTT_TIMEOUT, con, 6
+            nsock_write(nsp, nsi, ncrack_write_handler, MQTT_TIMEOUT, con,
             (const char *)con->outbuf->get_dataptr(), con->outbuf->get_len());
             break;
         case MQTT_FINI:

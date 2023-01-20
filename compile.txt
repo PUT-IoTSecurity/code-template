@@ -1,0 +1,6 @@
+First:
+
+g++ -Lnbase -Lnsock/src -Lopensshlib   -o ncrack ncrack.o utils.o TargetGroup.o Target.o targets.o NcrackOps.o Service.o ServiceGroup.o Connection.o services.o timing.o ncrack_error.o output.o ncrack_tty.o Buf.o NcrackOutputTable.o ncrack_input.o ncrack_resume.o crypto.o http.o http_digest.o xml.o ntlmssp.o modules/ncrack_ssh.o modules/ncrack_smb.o modules/ncrack_smb2.o modules/ncrack_rdp.o modules/ncrack_sip.o modules/ncrack_psql.o modules/ncrack_mysql.o modules/ncrack_winrm.o modules/ncrack_mongodb.o modules/ncrack_ftp.o modules/ncrack_telnet.o modules/ncrack_http.o modules/ncrack_pop3.o modules/ncrack_vnc.o modules/ncrack_redis.o modules/ncrack_owa.o modules/ncrack_imap.o modules/ncrack_cassandra.o modules/ncrack_mssql.o modules/ncrack_cvs.o modules/ncrack_wordpress.o modules/ncrack_joomla.o modules/ncrack_dicom.o modules/ncrack_mqtt.o -lnsock -lnbase -lssl -lcrypto -lopenssh -Wl,--allow-multiple-definition
+
+then run:
+make
